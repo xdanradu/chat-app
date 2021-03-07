@@ -2,10 +2,10 @@ const mysql = require('mysql');
 const config = require('../config/config');
 
 const pool = mysql.createPool({
-    host: config.host,
-    user: "root",
-    password: "root",
-    database: "auth"
+    host: config.db.host,
+    user: config.db.user,
+    password: config.db.password,
+    database: config.db.name
 });
 
 function getUser(req, res, next) {
