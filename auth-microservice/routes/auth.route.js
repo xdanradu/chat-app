@@ -1,18 +1,19 @@
 const express = require('express');
 const authCtrl = require('../controllers/auth.controller');
 const jwtGuard = require('./auth.guard');
+const db = require('../controllers/database.controller');
 
 const router = express.Router();
-router.post('/login', login);
-router.get('/me', jwtGuard, me);
+router.post('/login', db.getUser, login);
+router.get('/me', jwtGuard, db.getUserByEmail, me);
 
 function login(req, res) {
-  let user = req.body;
-  // Check user and get role from DB
-  // Only if username and password are valid generate the token
-  // User: { id: 123, email: 'name@test.com', role: 'ADMIN', other data }
-  let token = authCtrl.generateToken(user);
-  res.json({ user, token });
+  if (req.user !== undefined ) {
+    let token = authCtrl.generateToken(req.user);
+    res.json({ user: req.user, token });
+  } else {
+    res.sendStatus(401);
+  }
 }
 
 function me(req, res) {
