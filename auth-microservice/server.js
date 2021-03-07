@@ -13,9 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors());
 
-
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.send('REST API v1');
 });
 
 app.get('/secured', jwtGuard, (req, res) => {
@@ -23,11 +22,6 @@ app.get('/secured', jwtGuard, (req, res) => {
 });
 
 app.use('/auth', authRoutes);
-
-
-
-
-
 
 app.listen(config.port, config.host);
 console.log(`Running Auth Microservice on http://localhost:${config.port}`);
