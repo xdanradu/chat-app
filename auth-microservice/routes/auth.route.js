@@ -8,8 +8,9 @@ router.get('/me', jwtGuard, me);
 
 function login(req, res) {
   let user = req.body;
-  // get user and role from db without password { json obj }
-  // if valid generate token
+  // Check user and get role from DB
+  // Only if username and password are valid generate the token
+  // User: { id: 123, email: 'name@test.com', role: 'ADMIN', other data }
   let token = authCtrl.generateToken(user);
   res.json({ user, token });
 }
