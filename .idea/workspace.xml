@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c40ee896-3c81-4826-82f8-177a17424a5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/chat-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-microservice/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-microservice/me.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-microservice/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/auth-microservice/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-microservice/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth-microservice/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +49,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615137060635</updated>
-      <workItem from="1615137061693" duration="307000" />
+      <workItem from="1615137061693" duration="410000" />
     </task>
+    <task id="LOCAL-00001" summary="Cleanup">
+      <created>1615137408174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615137408174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="-1335" y="88" key="CommitChangelistDialog2" timestamp="1615137407793">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1335" y="88" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040/3840.0.1280.680@-1920.0.1920.1040" timestamp="1615137407793" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1615137279792">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -82,5 +89,9 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040/3840.0.1280.680@-1920.0.1920.1040" timestamp="1615137279792" />
+    <state x="-1368" y="240" key="Vcs.Push.Dialog.v2" timestamp="1615137409087">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="240" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040/3840.0.1280.680@-1920.0.1920.1040" timestamp="1615137409087" />
   </component>
 </project>

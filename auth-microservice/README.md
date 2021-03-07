@@ -42,10 +42,13 @@ npm run dev
 GET localhost:8080
 
 Get the token using any username and password {"username": "root", "password": "123"} as request body (json) from:
+
 POST localhost:8080/auth/login
 
 Check the token (using Postman) by manually setting the token on the Authorization header as "Bearer wqewqhewqe-token-wewqe":
+
 GET localhost:8080/auth/login
+
 GET localhost:8080/secured
 
 
