@@ -1,11 +1,11 @@
 const express = require('express');
 const authCtrl = require('../controllers/auth.controller');
 const jwtGuard = require('./auth.guard');
-const db = require('../controllers/database.controller');
+const userController = require('../controllers/user.controller');
 
 const router = express.Router();
-router.post('/login', db.getUser, login);
-router.get('/me', jwtGuard, db.getUserByEmail, me);
+router.post('/login', userController.getUser, login);
+router.get('/me', jwtGuard, userController.getUserByEmail, me);
 
 function login(req, res) {
   if (req.user !== undefined ) {
