@@ -92,7 +92,7 @@ How to start everything in one network:
 
 # Running the system
 
-Devleopment mode
+Development mode
 
 - run the mysql and phpmyadmin containers from docker
 - run auth-microservice in dev mode from package json
