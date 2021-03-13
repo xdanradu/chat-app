@@ -5,7 +5,7 @@ require('dotenv').config();
 // define validation for all the env vars
 const envVarsSchema = Joi.object({
   NODE_ENV: Joi.string()
-      .valid('development', 'production', 'test', 'provision')
+      .valid('dev', 'live', 'test', 'provision')
       .default('development'),
   SERVER_HOST: Joi.string().required()
       .description('Microservice host url'),

@@ -6,7 +6,7 @@ docker build -t dradu/auth_microservice .
 ### List Docker images
 docker images
 
-### Run the image on port 49160
+### Run the image on port 49160 on localhost 
 docker run -p 49160:8080 -d dradu/auth_microservice
 
 # Get container ID

@@ -1,43 +1,43 @@
-const mysql = require('mysql');
-const config = require('../config/config');
+const { User }  = require('../models/user');
 
-const pool = mysql.createPool({
-    host: config.db.host,
-    user: config.db.user,
-    password: config.db.password,
-    database: config.db.name
-});
-
-function getUser(req, res, next) {
-    let sql = `SELECT id, name, email FROM users WHERE email='${req.body.username}' AND password='${req.body.password}'`;
-    pool.getConnection(function(err, con) {
-        if (err) {
-            req.error = err;
-            next();
-        };
-        con.query(sql, function (err, result) {
-            if (err) res.json({ error: err });
+async function getUser(req, res, next) {
+    try {
+        await User.findAll({
+            attributes: [
+                'id', 'firstName', 'lastName', 'email'],
+            where: {
+                email: req.body.username,
+                password: req.body.password
+            }
+        }).then(result => {
             if (result.length === 1) req.user = result[0];
-            con.release();
             next();
         });
-    });
+    } catch (error) {
+        console.error('Unable to connect to the database:', error);
+        req.error = 'DENY';
+        next();
+    }
 }
 
-function getUserByEmail(req, res, next) {
-    let sql = `SELECT id, name, email FROM users WHERE email='${req.user.username}'`;
-    pool.getConnection(function(err, con) {
-        if (err) {
-            req.error = err;
-            next();
-        };
-        con.query(sql, function (err, result) {
-            if (err) res.json({ error: err });
+async function getUserByEmail(req, res, next) {
+    try {
+        await User.findAll({
+            attributes: [
+                'id', 'firstName', 'lastName', 'email'],
+            where: {
+                email: req.user.username
+            }
+        }).then(result => {
             if (result.length === 1) req.user = result[0];
-            con.release();
             next();
         });
-    });
+    } catch (error) {
+        console.error('Unable to connect to the database:', error);
+        req.user = {};
+        req.error = '500';
+        next();
+    }
 }
 
 module.exports = {

@@ -6,7 +6,9 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "db:init": "node scripts/init-db.js",
+    "db:migrate": "node scripts/migrate-db.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -15,7 +17,8 @@
     "express": "^4.16.1",
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1"
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
