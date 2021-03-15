@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Chat client</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+  </head>
+  <body>
+    <div class="app">
+
+      <input
+              class="message"
+              type="email"
+              id="email"
+              placeholder=""
+              value="admin@admin.com"
+      />
+      <input
+              class="message"
+              type="password"
+              id="password"
+              placeholder=""
+              value="admin"
+      />
+      <button class="send-button" id="login">Login</button>
+
+
+      <div id="user-name"></div>
+      <div id="client-id"></div>
+
+      <div class="messages"></div>
+      <input
+        class="message long"
+        type="text"
+        id="message"
+        placeholder="Write a message"
+      />
+      <button class="send-button" id="send">Send</button>
+    </div>
+
+
+    <script src="client.js"></script>
+  </body>
+</html>

@@ -10,7 +10,7 @@ async function getUser(req, res, next) {
                 password: req.body.password
             }
         }).then(result => {
-            if (result.length === 1) req.user = result[0].dataValues;
+            if (result.length === 1) req.user = result[0];
             next();
         });
     } catch (error) {
@@ -26,7 +26,7 @@ async function getUserByEmail(req, res, next) {
             attributes: [
                 'id', 'firstName', 'lastName', 'email'],
             where: {
-                email: req.user.email
+                email: req.user.username
             }
         }).then(result => {
             if (result.length === 1) req.user = result[0];
